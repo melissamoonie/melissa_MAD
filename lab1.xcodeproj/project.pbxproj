@@ -12,6 +12,9 @@
 		A10DCD921F6AFE7500026915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10DCD901F6AFE7500026915 /* Main.storyboard */; };
 		A10DCD941F6AFE7500026915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10DCD931F6AFE7500026915 /* Assets.xcassets */; };
 		A10DCD971F6AFE7500026915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10DCD951F6AFE7500026915 /* LaunchScreen.storyboard */; };
+		A10DCD9F1F6B004700026915 /* mad1.png in Resources */ = {isa = PBXBuildFile; fileRef = A10DCD9E1F6B004700026915 /* mad1.png */; };
+		A10DCDA11F6B005800026915 /* mad2.png in Resources */ = {isa = PBXBuildFile; fileRef = A10DCDA01F6B005800026915 /* mad2.png */; };
+		A10DCDA31F6B006400026915 /* mad3.png in Resources */ = {isa = PBXBuildFile; fileRef = A10DCDA21F6B006400026915 /* mad3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		A10DCD931F6AFE7500026915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10DCD961F6AFE7500026915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A10DCD981F6AFE7500026915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10DCD9E1F6B004700026915 /* mad1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mad1.png; path = ../../mad1.png; sourceTree = "<group>"; };
+		A10DCDA01F6B005800026915 /* mad2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mad2.png; path = ../../mad2.png; sourceTree = "<group>"; };
+		A10DCDA21F6B006400026915 /* mad3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mad3.png; path = ../../mad3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 				A10DCD8E1F6AFE7500026915 /* ViewController.swift */,
 				A10DCD901F6AFE7500026915 /* Main.storyboard */,
 				A10DCD931F6AFE7500026915 /* Assets.xcassets */,
+				A10DCDA21F6B006400026915 /* mad3.png */,
+				A10DCDA01F6B005800026915 /* mad2.png */,
+				A10DCD9E1F6B004700026915 /* mad1.png */,
 				A10DCD951F6AFE7500026915 /* LaunchScreen.storyboard */,
 				A10DCD981F6AFE7500026915 /* Info.plist */,
 			);
@@ -124,7 +133,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10DCD971F6AFE7500026915 /* LaunchScreen.storyboard in Resources */,
+				A10DCDA11F6B005800026915 /* mad2.png in Resources */,
+				A10DCDA31F6B006400026915 /* mad3.png in Resources */,
 				A10DCD941F6AFE7500026915 /* Assets.xcassets in Resources */,
+				A10DCD9F1F6B004700026915 /* mad1.png in Resources */,
 				A10DCD921F6AFE7500026915 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

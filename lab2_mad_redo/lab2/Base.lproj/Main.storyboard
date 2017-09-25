@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab2new" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KXu-OU-5KW">
+                                <rect key="frame" x="23" y="28" width="200" height="251"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travisDive" translatesAutoresizingMaskIntoConstraints="NO" id="Tif-le-0rN">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diving Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewn-ga-wDT" colorLabel="IBBuiltInLabel-Red">
+                                        <rect key="frame" x="0.0" y="200" width="200" height="23"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" red="0.032556055316647188" green="0.074811752083362548" blue="0.081302623056994872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Hn2-zx-1uY">
+                                        <rect key="frame" x="0.0" y="223" width="200" height="29"/>
+                                        <color key="backgroundColor" red="0.40132333910000001" green="0.9251043565" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <segments>
+                                            <segment title="Oregon"/>
+                                            <segment title="Colorado"/>
+                                        </segments>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <connections>
+                                            <action selector="changeInfo:" destination="BYZ-38-t0r" eventType="valueChanged" id="ie6-4c-YGz"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yJH-s8-vVe">
+                                <rect key="frame" x="179" y="479" width="256" height="80.5"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="2" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="34q-iy-fcm">
+                                        <rect key="frame" x="-2" y="0.0" width="260" height="31"/>
+                                        <connections>
+                                            <action selector="changeFontSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="TBi-1s-4Sb"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Font Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0P-Ok-SrB">
+                                        <rect key="frame" x="0.0" y="30" width="256" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUT-aJ-LTg">
+                                        <rect key="frame" x="0.0" y="50.5" width="256" height="30"/>
+                                        <state key="normal" title="Red Text is Better"/>
+                                        <connections>
+                                            <action selector="colorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="geS-VV-XLj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92x-Uq-NTW">
+                                <rect key="frame" x="54.5" y="616" width="304" height="31"/>
+                                <subviews>
+                                    <switch opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pvk-z9-AiN">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                        <color key="backgroundColor" red="0.27232974128702464" green="0.62579648830100731" blue="0.68009229274611394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="onTintColor" red="0.16661373791377454" green="0.38286781163300126" blue="0.4160864637305699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="thumbTintColor" red="0.40132333910000001" green="0.9251043565" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="updateFont:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fmy-vt-mLh"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Slide to Change the Excitement Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCU-DP-mWb">
+                                        <rect key="frame" x="49" y="0.0" width="255" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19243984687750648" green="1" blue="0.48789344937182333" alpha="0.56646126760563376" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pvk-z9-AiN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38.5" id="8Gl-cW-PUK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yJH-s8-vVe" secondAttribute="trailing" constant="-10" id="U3v-Uh-tKc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="92x-Uq-NTW" secondAttribute="trailing" constant="0.5" id="ZIo-sL-oio"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="92x-Uq-NTW" secondAttribute="bottom" constant="20" id="fIx-E5-J7h"/>
+                            <constraint firstItem="KXu-OU-5KW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="kIZ-mX-0z3"/>
+                            <constraint firstItem="KXu-OU-5KW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="7" id="mRV-x1-mZg"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="capitalSwitch" destination="pvk-z9-AiN" id="zuY-Me-7sM"/>
+                        <outlet property="diveImage" destination="Tif-le-0rN" id="kdk-x5-TTf"/>
+                        <outlet property="diveText" destination="ewn-ga-wDT" id="eql-Pt-b7g"/>
+                        <outlet property="fontSizeLabel" destination="l0P-Ok-SrB" id="W12-bg-efc"/>
+                        <outlet property="imageControl" destination="Hn2-zx-1uY" id="JPN-3f-qy0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.78057553956836" y="138.48920863309354"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="travisDive" width="200" height="200"/>
+    </resources>
+</document>

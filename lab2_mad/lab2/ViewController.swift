@@ -22,12 +22,12 @@ class ViewController: UIViewController {
     @IBAction func changeInfo(_ sender: UISegmentedControl) {
         if imageControl.selectedSegmentIndex==0{
             diveText.text="Oregon Cliff Diving"
-            diveImage.image=UIImage(named:"#imageLiteral(resourceName: "travisDive2")")
+            diveImage.image=UIImage(named:"#imageLiteral(resourceName: "image1")")
            
         }
         else if imageControl.selectedSegmentIndex==1{
             diveText.text="Colorado Cliff Diving"
-            diveImage.image=UIImage(named: "#imageLiteral(resourceName: ",travisDive3")")
+            diveImage.image=UIImage(named: "#imageLiteral(resourceName: "Image-1")")
         }
     }
 
@@ -60,12 +60,12 @@ class ViewController: UIViewController {
     func updateImage(){
         if imageControl.selectedSegmentIndex==0{
             diveText.text="Colorado Cliff Diving"
-            diveImage.image=UIImage(named:"#imageLiteral(resourceName: ",travisDive")")
+            diveImage.image=UIImage(named: "#imageLiteral(resourceName: "image1")")
             
         }
         else if imageControl.selectedSegmentIndex==1{
             diveText.text="Oregon Cliff Diving"
-            diveImage.image=UIImage(named: "#imageLiteral(resourceName: "travisDive2")")
+            diveImage.image=UIImage(named: "#imageLiteral(resourceName: "Image-1")")
         }
         
         

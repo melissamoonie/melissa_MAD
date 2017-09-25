@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab2" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab2new" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -49,22 +49,22 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yJH-s8-vVe">
-                                <rect key="frame" x="179" y="479" width="252" height="80.5"/>
+                                <rect key="frame" x="179" y="479" width="256" height="80.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="2" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="34q-iy-fcm">
-                                        <rect key="frame" x="-2" y="0.0" width="256" height="31"/>
+                                        <rect key="frame" x="-2" y="0.0" width="260" height="31"/>
                                         <connections>
                                             <action selector="changeFontSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="TBi-1s-4Sb"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Font Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0P-Ok-SrB">
-                                        <rect key="frame" x="0.0" y="30" width="252" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="30" width="256" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUT-aJ-LTg">
-                                        <rect key="frame" x="0.0" y="50.5" width="252" height="30"/>
+                                        <rect key="frame" x="0.0" y="50.5" width="256" height="30"/>
                                         <state key="normal" title="Red Text is Better"/>
                                         <connections>
                                             <action selector="colorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="geS-VV-XLj"/>

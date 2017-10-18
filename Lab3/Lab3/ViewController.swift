@@ -12,10 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
 
     @IBOutlet weak var checkAmount: UITextField!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    
     @IBOutlet weak var total: UILabel!
 
     @IBOutlet weak var tipPercent: UITextField!
@@ -27,10 +24,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder();
         return true;
     }
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+      
+    }
     func updateTipTotals() {
-        var amount:Float //check amount
-        var pct:Float //tip percentage
+        var amount:Float
+        var percent:Float
         
         if checkAmount.text!.isEmpty {
             amount = 0.0
@@ -38,40 +38,40 @@ class ViewController: UIViewController, UITextFieldDelegate {
             amount = Float(checkAmount.text!)!
         }
         if tipPercent.text!.isEmpty {
-            pct = 0.0
+            percent = 0.0
         }
         else {
-            pct = Float(tipPercent.text!)!/100
+            percent = Float(tipPercent.text!)!/100
         }
         
-        let numberOfPeople=Int(people.text!) //returns an optional
-        let tip=amount*pct
+        let numberOfPeople=Int(people.text!)
+        let tip=amount*percent
         let total=amount+tip
-        var personTotal : Float = 0.0 //specify Float so it's not a Double
+        var personTotal : Float = 0.0
         if numberOfPeople != nil {
             if numberOfPeople! > 0 {
                 personTotal = total / Float(numberOfPeople!)
             }else {
-                //create a UIAlertController object
+              
                 let alert=UIAlertController(title: "Warning", message: "The number of people must be greater than 0", preferredStyle: UIAlertControllerStyle.alert)
-                //create a UIAlertAction object for the button
+              
                 let cancelAction=UIAlertAction(title: "Cancel", style:UIAlertActionStyle.cancel, handler: nil)
-                alert.addAction(cancelAction) //adds the alert action to the alert object
+                alert.addAction(cancelAction)
                 let okAction=UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {action in
                     self.people.text="1"
                     self.updateTipTotals()
                 })
                 alert.addAction(okAction)
                 present(alert, animated: true, completion: nil)
-            } //end else
+            }
         }
         
-        //format results as currency
-        let currencyFormatter = NumberFormatter()
-        currencyFormatter.numberStyle=NumberFormatter.Style.currency //set the number style
-        tipDue.text=currencyFormatter.string(from: NSNumber(value: tip)) //returns a formatted string
-        totalDue.text=currencyFormatter.string(from: NSNumber(value: total))
-        totalDuePerPerson.text=currencyFormatter.string(from: NSNumber(value: personTotal))
+      
+        let currencyFormat = NumberFormatter()
+        currencyFormat.numberStyle=NumberFormatter.Style.currency 
+        tipDue.text=currencyFormat.string(from: NSNumber(value: tip))
+        totalDue.text=currencyFormat.string(from: NSNumber(value: total))
+        totalDuePerPerson.text=currencyFormat.string(from: NSNumber(value: personTotal))
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

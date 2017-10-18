@@ -125,6 +125,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlC-Nk-MbP" userLabel="field1">
+                                <rect key="frame" x="253" y="156" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QI9-MS-NZ5" userLabel="field2">
+                                <rect key="frame" x="232" y="216" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsv-e7-qv8" userLabel="field3">
+                                <rect key="frame" x="211" y="279" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.40132333910000001" green="0.9251043565" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -137,10 +158,10 @@
                     </view>
                     <connections>
                         <outlet property="people" destination="2rP-d5-Kzi" id="ngg-rr-4y4"/>
-                        <outlet property="tipDue" destination="Ui1-sS-bvx" id="oWK-2H-3P1"/>
+                        <outlet property="tipDue" destination="QI9-MS-NZ5" id="6Nn-WG-pCD"/>
                         <outlet property="tipPercent" destination="CBv-9G-YvH" id="3Je-ic-KtF"/>
-                        <outlet property="totalDue" destination="gNc-4c-Bya" id="JEz-a3-RG2"/>
-                        <outlet property="totalDuePerPerson" destination="fMO-DS-a3z" id="fZa-yN-Rvn"/>
+                        <outlet property="totalDue" destination="xlC-Nk-MbP" id="MXk-8u-E2B"/>
+                        <outlet property="totalDuePerPerson" destination="Rsv-e7-qv8" id="isb-DS-sWF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

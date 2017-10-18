@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Lab3/ViewController.swift"
-            timestampString = "529371186.11238"
+            timestampString = "530057766.492953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "updateTipTotals()"
             landmarkType = "7">
          </BreakpointContent>

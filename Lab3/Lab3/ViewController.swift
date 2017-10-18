@@ -15,11 +15,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var total: UILabel!
 
-    @IBOutlet weak var tipPercent: UITextField!
-    @IBOutlet weak var people: UITextField!
+    @IBOutlet weak var totalDuePerPerson: UILabel!
     @IBOutlet weak var tipDue: UILabel!
     @IBOutlet weak var totalDue: UILabel!
-    @IBOutlet weak var totalDuePerPerson: UILabel!
+    @IBOutlet weak var tipPercent: UITextField!
+    @IBOutlet weak var people: UITextField!
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder();
         return true;
@@ -68,7 +69,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
       
         let currencyFormat = NumberFormatter()
-        currencyFormat.numberStyle=NumberFormatter.Style.currency 
+        currencyFormat.numberStyle=NumberFormatter.Style.currency
         tipDue.text=currencyFormat.string(from: NSNumber(value: tip))
         totalDue.text=currencyFormat.string(from: NSNumber(value: total))
         totalDuePerPerson.text=currencyFormat.string(from: NSNumber(value: personTotal))

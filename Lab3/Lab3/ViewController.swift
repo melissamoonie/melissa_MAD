@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var checkAmount: UITextField!
     
-    @IBOutlet weak var total: UILabel!
+//    @IBOutlet weak var total: UILabel!
 
     @IBOutlet weak var totalDuePerPerson: UILabel!
     @IBOutlet weak var tipDue: UILabel!
@@ -23,15 +23,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder();
-        return true;
+        return true
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      
-    }
+    
+
     func updateTipTotals() {
         var amount:Float
-        var percent:Float
+        var pct:Float
         
         if checkAmount.text!.isEmpty {
             amount = 0.0
@@ -39,14 +37,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
             amount = Float(checkAmount.text!)!
         }
         if tipPercent.text!.isEmpty {
-            percent = 0.0
+            pct = 0.0
         }
         else {
-            percent = Float(tipPercent.text!)!/100
+            pct = Float(tipPercent.text!)!/100
         }
         
         let numberOfPeople=Int(people.text!)
-        let tip=amount*percent
+        let tip=amount*pct
+        
         let total=amount+tip
         var personTotal : Float = 0.0
         if numberOfPeople != nil {
@@ -79,13 +78,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         updateTipTotals()
     }
 
-    
+    override func viewDidLoad() {
+        checkAmount.delegate=self;
+        tipPercent.delegate=self;
+        people.delegate=self;
+        super.viewDidLoad()
+    }
+    //    override func viewDidLoad() {
+    //        super.viewDidLoad()
+    //
+    //    }
     
 //    func updateTipTotals()
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 //    override func viewDidLoad(){
 //        checkAmount.delegate=self;
 //        tipPercent.delegate=self;

@@ -98,6 +98,9 @@
                                     <segment title="Pina Colada"/>
                                 </segments>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="segmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="oYs-oN-yMG"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thirsty?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv2-CO-sVk">
                                 <rect key="frame" x="18.5" y="279" width="61.5" height="20.5"/>
@@ -105,6 +108,13 @@
                                 <color key="textColor" red="1" green="0.15873566250000001" blue="0.99038542730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kKk-3z-PlX">
+                                <rect key="frame" x="4" y="562" width="110" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="CFy-7b-4Id"/>
+                                    <constraint firstAttribute="width" constant="110" id="lj1-j0-5V6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -115,6 +125,8 @@
                             <constraint firstAttribute="trailing" secondItem="z08-ap-psT" secondAttribute="trailing" id="9yt-ap-WAo"/>
                             <constraint firstItem="7yI-MT-K4g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ASq-Hz-gjt"/>
                             <constraint firstItem="RBF-sx-Ryh" firstAttribute="top" secondItem="KXV-np-NjW" secondAttribute="bottom" constant="8" symbolic="YES" id="BRg-e5-eCf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kKk-3z-PlX" secondAttribute="trailing" constant="245" id="CL8-hU-bRo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kKk-3z-PlX" secondAttribute="bottom" constant="8" id="FeF-Qz-toX"/>
                             <constraint firstItem="z08-ap-psT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="G94-Le-cXL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3Yo-lW-qCo" secondAttribute="bottom" constant="183" id="J1E-ha-DDF"/>
                             <constraint firstItem="RBF-sx-Ryh" firstAttribute="top" secondItem="7yI-MT-K4g" secondAttribute="bottom" constant="-141" id="MII-QU-dIg"/>
@@ -132,7 +144,9 @@
                     <connections>
                         <outlet property="backgroundImage" destination="z08-ap-psT" id="Hyp-dK-muW"/>
                         <outlet property="fontSizeLabel" destination="hh0-bn-Yhf" id="zMd-md-Maq"/>
+                        <outlet property="imageView" destination="kKk-3z-PlX" id="gb2-Ay-Fiq"/>
                         <outlet property="mainText" destination="RBF-sx-Ryh" id="Jer-S0-7QI"/>
+                        <outlet property="segmentControl" destination="uuG-ao-7Hd" id="QXE-U3-hDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

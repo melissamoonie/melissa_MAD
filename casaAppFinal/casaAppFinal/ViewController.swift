@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var total2: UILabel!
     var myInt = Int()
-    
+      var budget: Float = 0.00
     @IBOutlet weak var total: UILabel!
     @IBAction func button(_ sender: UIButton) {
         
@@ -27,11 +27,20 @@ class ViewController: UIViewController {
 
         
     }
+    
+    var user=Favorite()
+    let num: Float = 1
+    
+    @IBAction func unwindSegue (_ segue:UIStoryboardSegue){
+        total.text=user.favBook
+        total2.text=user.favAuthor
+    }
     @IBOutlet weak var drinkPrice: UILabel!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var fontSizeLabel: UILabel!
-    var budget: Float = 0.00
+    
+//    var user=Favorite()
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
         if segmentControl.selectedSegmentIndex == 0 {
             
@@ -56,17 +65,30 @@ class ViewController: UIViewController {
     }
     @IBAction func budget(_ sender: UISlider) {
         let fontSize=sender.value;
+        myInt = Int(sender.value)
+        var budget: Int = Int(sender.value)
         fontSizeLabel.text=String(format: "%.0f", fontSize)
+        
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.numberStyle=NumberFormatter.Style.currency
+        
+
+        let roundedValue = round(sender.value)
+        budget=Int(roundedValue)
+        total2.text=currencyFormatter.string(from:NSNumber(value: budget))
+
+//        var budget=sender.value
+       
+        
     }
 
-        
-        
-    
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        myInt = 10
-        // Do any additional setup after loading the view, typically from a nib.
+//        myInt = Int(sender.value)
+//       myInt = (Int(budget))
+
     }
 
     override func didReceiveMemoryWarning() {

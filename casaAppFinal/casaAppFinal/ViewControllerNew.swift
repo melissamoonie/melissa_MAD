@@ -13,9 +13,51 @@ import UIKit
 
 class ViewControllerNew: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var imageSelect: UIImageView!
     @IBOutlet weak var text1: UITextField!
     @IBOutlet weak var totalBudget: UITextView!
     @IBOutlet weak var text2: UITextField!
+    @IBOutlet weak var totalNew2: UILabel!
+    @IBAction func select3(_ sender: UIButton) {
+//        if(sender.tag == 1){
+//            imageSelect.image=UIImage(named: "beer.jpg")
+//            
+//            
+//        }
+//        if(sender.tag == 2){
+//            imageSelect.image=UIImage(named: "marg.jpg")
+//            
+//            
+//        }
+//        
+        
+        if(sender.tag == 3){
+            imageSelect.image=UIImage(named: "#imageLiteral(resourceName: ",pina,")")
+                totalBudget.text = "Your Casa Bonita food budget is $\(intPassed + 7). Enjoy your Pina Colada!"
+            
+            
+        }
+    }
+    @IBOutlet weak var totalNew3: UILabel!
+    @IBAction func select2(_ sender: UIButton) {
+//        if(sender.tag == 1){
+//            imageSelect.image=UIImage(named: "beer.jpg")
+//            
+//            
+//        }
+        if(sender.tag == 2){
+            imageSelect.image=UIImage(named: "#imageLiteral(resourceName: ",marg,")")
+                totalBudget.text = "Your Casa Bonita food budget is $\(intPassed + 7). Enjoy your margarita!"
+            
+        }
+        
+        
+//        if(sender.tag == 3){
+//            imageSelect.image=UIImage(named: "pina.jpg")
+//            
+//            
+//        }
+    }
     var passString = ""
     var intPassed = Int()
     var user=Favorite()
@@ -23,13 +65,30 @@ class ViewControllerNew: UIViewController, UITextFieldDelegate {
     @IBAction func unwindSegue(_ segue:UIStoryboardSegue){
     }
     @IBOutlet weak var totalNew: UILabel!
-    @IBOutlet weak var totalNew2: UILabel!
-    @IBOutlet weak var totalNew3: UILabel!
+    @IBAction func select1(_ sender: UIButton) {
+        if(sender.tag == 1){
+            imageSelect.image=UIImage(named: "#imageLiteral(resourceName: ",beer,")")
+                totalBudget.text = "Your Casa Bonita food budget is $\(intPassed + 5). Enjoy your cerveza!"
+            
+        }
+//        if(sender.tag == 2){
+//            imageSelect.image=UIImage(named: "marg.jpg")
+//            
+//            
+//        }
+//    
+//    
+//        if(sender.tag == 3){
+//            imageSelect.image=UIImage(named: "pina.jpg")
+//            
+//            
+//        }
+    }
     override func viewDidLoad() {
         totalNew.text = passString + " Price with 1 Cerveza: \(intPassed + 5)"
         totalNew2.text = passString + " Price with 1 Margarita: \(intPassed + 7)"
         totalNew3.text = passString + " Price with 1 Pina Colada: \(intPassed + 6)"
-        totalBudget.text = "Your Casa Bonita food budget is $\(intPassed)."
+        totalBudget.text = "Your Casa Bonita food budget is $\(intPassed). Please choose a drink to enjoy (21 and over only)."
         
 //        text1.delegate=self
 //        text2.delegate=self

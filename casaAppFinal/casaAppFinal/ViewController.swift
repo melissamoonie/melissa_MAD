@@ -46,21 +46,21 @@ class ViewController: UIViewController {
         if segmentControl.selectedSegmentIndex == 0 {
             
             
-            imageView.image=UIImage(named:"beer.jpg")
+            imageView.image=UIImage(named:"#imageLiteral(resourceName: ",beer,")")
             drinkPrice.text=String("$5.00")
            num = 5
             
         }
         if segmentControl.selectedSegmentIndex == 1 {
             
-            imageView.image=UIImage(named: "marg.jpg" )
+            imageView.image=UIImage(named: "#imageLiteral(resourceName: ",marg,")" )
             drinkPrice.text=String("$7.00")
             num = 7
             
         }
         if segmentControl.selectedSegmentIndex == 2 {
             
-            imageView.image=UIImage(named: "pina.jpg" )
+            imageView.image=UIImage(named: "#imageLiteral(resourceName: ",pina,")" )
             drinkPrice.text=String("$7.00")
             num = 7
             

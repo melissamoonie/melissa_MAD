@@ -29,7 +29,8 @@ class ViewController: UIViewController {
     }
     
     var user=Favorite()
-    let num: Float = 1
+    var num: Int = 0
+    
     
     @IBAction func unwindSegue (_ segue:UIStoryboardSegue){
         total.text=user.favBook
@@ -46,19 +47,23 @@ class ViewController: UIViewController {
             
             
             imageView.image=UIImage(named:"beer.jpg")
-            drinkPrice.text=String("$4.99")
+            drinkPrice.text=String("$5.00")
+           num = 5
             
         }
         if segmentControl.selectedSegmentIndex == 1 {
             
             imageView.image=UIImage(named: "marg.jpg" )
-            drinkPrice.text=String("$6.99")
+            drinkPrice.text=String("$7.00")
+            num = 7
             
         }
         if segmentControl.selectedSegmentIndex == 2 {
             
             imageView.image=UIImage(named: "pina.jpg" )
-            drinkPrice.text=String("$6.49")
+            drinkPrice.text=String("$7.00")
+            num = 7
+            
             
         }
         

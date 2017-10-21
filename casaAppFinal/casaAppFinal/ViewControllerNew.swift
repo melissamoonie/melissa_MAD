@@ -19,15 +19,20 @@ class ViewControllerNew: UIViewController, UITextFieldDelegate {
     var passString = ""
     var intPassed = Int()
     var user=Favorite()
+//    let intPassed = self.intPassed + 6
     @IBAction func unwindSegue(_ segue:UIStoryboardSegue){
     }
     @IBOutlet weak var totalNew: UILabel!
+    @IBOutlet weak var totalNew2: UILabel!
+    @IBOutlet weak var totalNew3: UILabel!
     override func viewDidLoad() {
-        totalNew.text = passString + " my Int: \(intPassed)"
-        totalBudget.text = "Your Casa Bonita budget is $\(intPassed)."
+        totalNew.text = passString + " Price with 1 Cerveza: \(intPassed + 5)"
+        totalNew2.text = passString + " Price with 1 Margarita: \(intPassed + 7)"
+        totalNew3.text = passString + " Price with 1 Pina Colada: \(intPassed + 6)"
+        totalBudget.text = "Your Casa Bonita food budget is $\(intPassed)."
         
-        text1.delegate=self
-        text2.delegate=self
+//        text1.delegate=self
+//        text2.delegate=self
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -45,7 +50,7 @@ class ViewControllerNew: UIViewController, UITextFieldDelegate {
             _ = segue.destination as! ViewControllerNew
             //check to see that text was entered in the textfields
             if text1.text!.isEmpty == false{
-//                ViewController.user.favBook=text1.text
+//                ViewControllerNew.user.favBook=text1.text
             }
         }
     }

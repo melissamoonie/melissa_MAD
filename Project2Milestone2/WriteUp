@@ -1,0 +1,5 @@
+On the home screen, I intend to populate the spinner with user choices. Perhaps I’ll use a string-array to have multiple 
+Unfortunately, I missed the day when we went over mapping with Android but if I am satisfied with where my project’s going, 
+I may try to tackle mapping techniques to show where the user is in relation to the restaurants. The items within my 
+string-array will all represent types of food as well as neighborhoods in Golden. I intend to use the switch function in Java 
+and use cases for each of the possible results. 
